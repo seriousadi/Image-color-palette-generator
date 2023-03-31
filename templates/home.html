@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% include "header.html" %}
 <body>
 <form action="{{url_for('home')}}" method="post" enctype="multipart/form-data">
-{{form.photo}}
-{{form.submit}}
-    </form>
-<h1>{{colors}}</h1>
+    <div class="chooseFile">
+        {{form.photo(class="form-control form-control-lg", id="formFileLg")}}
+    </div>
+    <div class="d-grid gap-2">
+        {{form.submit(class='btn btn-outline-secondary btn-lg')}}
+    </div>
+</form>
+{% for color in colors %}
+<div class="colors border rounded shadow" style="background-color:{{color}}">
+    <h2>{{color}}</h2>
+</div>
+{% endfor %}
+
+
 </body>
 
-</html>
+
+{% include "footer.html" %}

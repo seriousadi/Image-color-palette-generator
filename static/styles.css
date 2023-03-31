@@ -1,0 +1,27 @@
+body{
+background-color:#B9E9FC;
+padding:6% 19%;
+}
+
+
+/* submitform */
+
+
+.chooseFile{
+margin:2rem 0 2rem;
+}
+
+/* colors */
+.colors{
+margin: 3rem 0 1.5rem;
+}
+/* */
+h2{
+margin:0.5rem;
+color:gray;
+}
+
+/* footer */
+footer{
+margin-top:5rem;
+}

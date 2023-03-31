@@ -24,11 +24,10 @@ def home():
     colors = []
     if request.method == "POST" and form.validate_on_submit:
         image = request.files['photo']
-        image_name = image.filename
-        image.save(secure_filename(filename=image_name))
+        image_name = secure_filename(image.filename)
+        image.save(image_name)
         top10 = process_image.get_top_10(image_name)
         colors = top10
-        time.sleep(2)
         if os.path.isfile(f"./{image_name}"):
             os.remove(f"./{image_name}")
 

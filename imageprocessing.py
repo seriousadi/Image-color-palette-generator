@@ -14,7 +14,7 @@ class ProcessImage():
 
     def get_top_10(self, imageLocation):
 
-        image = Image.open(f"./{imageLocation}")
+        image = Image.open(f"{imageLocation}")
 
         list1 = []
         numpydata = np.asarray(image)
